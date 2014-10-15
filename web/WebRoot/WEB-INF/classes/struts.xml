@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.i18n.encoding" value="GBK" />
+	<package name="web" namespace="/" extends="struts-default">
+		<default-action-ref name="index" />
+		<action name="index" class="web.BookAction" method="list">
+			<result name="success">/myindex.jsp</result>
+		</action>
+		<action name="search" class="web.BookAction" method="slist">
+			<result name="success">/search.jsp</result>
+		</action>
+		
+
+		<action name="detail" class="web.BookAction" method="updateInput">
+			<result name="input">/detail.jsp</result>
+		</action>
+		
+		
+		
+	</package>
+</struts>  
